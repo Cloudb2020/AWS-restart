@@ -49,7 +49,7 @@ with open('Data_Files\car_fleet.csv') as csvFile:
 # Makes a deep copy of the default vehicle and stores it into the current vehicle variable.
 currentVehicle = copy.deepcopy(myVehicle)
 for key, value in currentVehicle.items():
-      print("{} : {}".format(key,value))
+      print(f'{key} : {value}')
 
 # This prints the list of vehicles that were read in from the csv file.
 for myCarProperties in myInventoryList:
