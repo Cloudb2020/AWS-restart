@@ -24,7 +24,7 @@ for key, value in myVehicle.items():
 myInventoryList = []
 
 # Here is where you read in the csv file
-with open('car_fleet.csv') as csvFile:  
+with open('Data_Files\car_fleet.csv') as csvFile:  
   csvReader = csv.reader(csvFile, delimiter=',')  
   lineCount = 0  
   for row in csvReader:  
@@ -48,6 +48,8 @@ with open('car_fleet.csv') as csvFile:
 
 # Makes a deep copy of the default vehicle and stores it into the current vehicle variable.
 currentVehicle = copy.deepcopy(myVehicle)
+for key, value in currentVehicle.items():
+      print("{} : {}".format(key,value))
 
 # This prints the list of vehicles that were read in from the csv file.
 for myCarProperties in myInventoryList:
